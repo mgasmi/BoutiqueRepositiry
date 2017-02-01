@@ -1,0 +1,48 @@
+#crud Category
+store_category:
+    path:     /category
+    defaults: { _controller: StoreAdminBundle:Category:show }
+store_add_category:
+    path:     /createCategory
+    defaults: { _controller: StoreAdminBundle:Category:create }
+store_find_category:
+    path:     /findCategory/{id}
+    defaults: { _controller: StoreAdminBundle:Category:findOne }
+store_delete_category:
+    path:     /deleteCategory/{id}
+    defaults: { _controller: StoreAdminBundle:Category:delete }
+store_update_category:
+    path:     /updateCategory/{id}
+    defaults: { _controller: StoreAdminBundle:Category:update }
+#crud Product
+store_product:
+    path:     /product
+    defaults: { _controller: StoreAdminBundle:Product:show }
+store_add_product:
+    path:     /createProduct
+    defaults: { _controller: StoreAdminBundle:Product:create }
+store_find_product:
+    path:     /findProduct/{id}
+    defaults: { _controller: StoreAdminBundle:Product:findOne }
+store_delete_product:
+    path:     /deleteProduct/{id}
+    defaults: { _controller: StoreAdminBundle:Product:delete }
+store_update_product:
+    path:     /updateProduct/{id}
+    defaults: { _controller: StoreAdminBundle:Product:update }
+ #crud User
+store_user:
+    path:     /user
+    defaults: { _controller: StoreAdminBundle:Member:show }
+store_add_user:
+    path:     /createUser
+    defaults: { _controller: StoreAdminBundle:Member:create }
+store_find_user:
+    path:     /findUser/{id}
+    defaults: { _controller: StoreAdminBundle:Member:findOne }
+store_delete_user:
+    path:     /deleteUser/{id}
+    defaults: { _controller: StoreAdminBundle:Member:delete }
+store_update_user:
+    path:     /updateUser/{id}
+    defaults: { _controller: StoreAdminBundle:Member:update }

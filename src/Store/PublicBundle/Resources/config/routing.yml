@@ -1,0 +1,3 @@
+store_public_homepage:
+    path:     /
+    defaults: { _controller: StorePublicBundle:Default:index }

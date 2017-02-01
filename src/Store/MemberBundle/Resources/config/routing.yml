@@ -1,0 +1,3 @@
+store_member_homepage:
+    path:     /
+    defaults: { _controller: StoreMemberBundle:Default:index }
