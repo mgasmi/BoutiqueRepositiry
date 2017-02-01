@@ -1,0 +1,8 @@
+<ul>{% for elem in users %}
+        <li>{{ elem.username }}
+                <a href="{{ path('store_find_user', {'id': elem.id}) }}" class="btn btn-default">detail</a>
+                <a href="{{ path('store_delete_user', {'id': elem.id}) }}" class="btn btn-default">delete</a>
+                <a href="{{ path('store_update_user', {'id': elem.id}) }}" class="btn btn-default">update</a>
+        </li>
+    {% endfor %}
+</ul>
