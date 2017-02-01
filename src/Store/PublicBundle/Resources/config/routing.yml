@@ -1,3 +1,6 @@
 store_public_homepage:
     path:     /
     defaults: { _controller: StorePublicBundle:Default:index }
+store_public_contact:
+    path:     /contact
+    defaults: { _controller: StorePublicBundle:Default:contact }

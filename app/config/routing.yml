@@ -10,10 +10,6 @@ store_admin:
     resource: "@StoreAdminBundle/Resources/config/routing.yml"
     prefix:   /admin
 
-store_core:
-    resource: "@StoreCoreBundle/Resources/config/routing.yml"
-    prefix:   /
-
 fos_user_security:
     resource: "@FOSUserBundle/Resources/config/routing/security.xml"
 

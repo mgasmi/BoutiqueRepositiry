@@ -16,7 +16,7 @@ class User extends BaseUser
     protected $id;
 
     /**
-     * @MongoDB\ReferenceOne(targetDocument="Cart")
+     * @MongoDB\ReferenceOne(targetDocument="Cart",cascade={"persist"})
      */
     private $cart;
 

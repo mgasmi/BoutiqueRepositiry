@@ -10,4 +10,8 @@ class DefaultController extends Controller
     {
         return $this->render('StorePublicBundle:Default:index.html.twig');
     }
+    public function contactAction()
+    {
+        return $this->render('StorePublicBundle:Default:contact.html.twig');
+    }
 }

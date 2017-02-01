@@ -40,6 +40,7 @@ class Category
         return $this;
     }
 
+
     /**
      * Get name
      *
@@ -49,8 +50,8 @@ class Category
     {
         return $this->name;
     }
-    public function __construct()
+    public function __toString()
     {
-        $this->product = new \Doctrine\Common\Collections\ArrayCollection();
+        return (string) $this->getName();
     }
 }

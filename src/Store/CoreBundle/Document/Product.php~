@@ -27,7 +27,7 @@ class Product
     /**
      * @MongoDB\ReferenceOne(targetDocument="Category", cascade={"persist"})
      */
-    private $caterogy;
+    private $category;
 
 
     /**
@@ -82,5 +82,27 @@ class Product
     public function getPrice()
     {
         return $this->price;
+    }
+
+    /**
+     * Set category
+     *
+     * @param Store\CoreBundle\Document\Category $category
+     * @return self
+     */
+    public function setCategory(\Store\CoreBundle\Document\Category $category)
+    {
+        $this->category = $category;
+        return $this;
+    }
+
+    /**
+     * Get category
+     *
+     * @return Store\CoreBundle\Document\Category $category
+     */
+    public function getCategory()
+    {
+        return $this->category;
     }
 }
