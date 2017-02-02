@@ -1,0 +1,21 @@
+{% extends "StoreCoreBundle::layout.html.twig" %}
+{% block body %}
+    <div class="container-fluid text-center bg-grey">
+        <h2>product</h2>
+        <h4>buy product</h4>
+        {% for elem in products %}
+        <div class="row text-center">
+            <div class="col-sm-4">
+                <div class="thumbnail">
+                    <img src="#" alt="Paris">
+                    <p>{{ elem.name }}</p>
+                    <p><a href="{{ path('store_member_homepage', {'productId': elem.id ,'cartId':app.user.cart.id})}}"class="btn btn-default">add to cart</a>
+                    </p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <hr/>
+    {{ render(controller("StoreMemberBundle:Cart:boxCart")) }}
+{% endblock %}

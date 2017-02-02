@@ -1,3 +1,7 @@
-{{ user.id }}
-{{ user.username }}
-{{ user.email }}
+{% extends "StoreCoreBundle::layout.html.twig" %}
+{% block body %}
+    <div id="header" class="jumbotron">
+        <p> user name :{{ user.username }}</p>
+        <p>email :{{ user.email }}</p>
+    </div>
+{% endblock %}

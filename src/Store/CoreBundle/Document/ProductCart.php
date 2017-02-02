@@ -18,6 +18,12 @@ class ProductCart
      * @MongoDB\Field(type="float")
      */
     private $quantity;
+
+    /**
+     * @MongoDB\Field(type="string")
+     */
+    private $status;
+
     /**
      * @MongoDB\ReferenceMany(targetDocument="Product", cascade="all")
      */
@@ -124,5 +130,21 @@ class ProductCart
     public function getCart()
     {
         return $this->cart;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getStatus()
+    {
+        return $this->status;
+    }
+
+    /**
+     * @param mixed $status
+     */
+    public function setStatus($status)
+    {
+        $this->status = $status;
     }
 }

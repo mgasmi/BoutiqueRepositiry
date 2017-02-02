@@ -1,3 +1,12 @@
 store_member_homepage:
+    path:     /{productId}/{cartId}
+    defaults: { _controller: StoreMemberBundle:Cart:addToCart }
+store_member_product:
     path:     /
-    defaults: { _controller: StoreMemberBundle:Default:index }
+    defaults: { _controller: StoreMemberBundle:Cart:show }
+store_member_cart:
+    path:     /showCartProduct
+    defaults: { _controller: StoreMemberBundle:Cart:showCart }
+store_member_box:
+    path:     /box
+    defaults: { _controller: StoreMemberBundle:Cart:boxCart }

@@ -1,0 +1,11 @@
+{% extends "StoreCoreBundle::layout.html.twig" %}
+{% block body %}
+    <div id="header" class="jumbotron">
+        <h3>cart product</h3>
+        <ul class="list-group">
+            {% for product in productCart.product %}
+                <li class="list-group-item">{{ product.name }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

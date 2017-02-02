@@ -1,7 +1,8 @@
-<html>
-<body>
-{{ product.name }}
-{{ product.price }}
-{{ product.category.name }}
-</body>
-</html>
+{% extends "StoreCoreBundle::layout.html.twig" %}
+{% block body %}
+<div id="header" class="jumbotron">
+    <p>name :{{ product.name }}</p>
+    <p>price :{{ product.price }}</p>
+    <p>category name :{{ product.category.name }}</p>
+</div>
+{% endblock %}

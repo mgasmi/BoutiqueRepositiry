@@ -1,0 +1,21 @@
+{% extends "StoreCoreBundle::layout.html.twig" %}
+{% block body %}
+    <div id="header" class="jumbotron">
+        {% for elem in productCart %}
+            {% if elem.status=='not yet' %}
+                <h3>cart waiting</h3>
+                    <ul class="list-group">
+                        {% for cart in elem.cart  %}
+                            {% for user in users  %}
+                                {% if user.cart.id == cart.id %}
+                                    <li class="list-group-item">{{ user.username }}</li>
+                                {% endif %}
+                            {% endfor  %}
+                        {% endfor  %}
+                        <li class="list-group-item">{{ elem .status }} <a href="{{ path('store_cart_accept', {'id': elem.id}) }}">accept</a>
+                        <a href="{{ path('store_cart_product', {'id': elem.id}) }}">list product</a>
+                    </ul>
+            {% endif %}
+        {% endfor %}
+    </div>
+{% endblock %}

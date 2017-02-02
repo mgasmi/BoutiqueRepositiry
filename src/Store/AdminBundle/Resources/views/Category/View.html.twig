@@ -1,9 +1,15 @@
-<a href="{{ path('store_add_category') }}" class="btn btn-default">create new</a>
-<ul>{% for elem in categories %}
-        <li>{{ elem.name }}
-                <a href="{{ path('store_find_category', {'id': elem.id}) }}" class="btn btn-default">detail</a>
-                <a href="{{ path('store_delete_category', {'id': elem.id}) }}" class="btn btn-default">delete</a>
-                <a href="{{ path('store_update_category', {'id': elem.id}) }}" class="btn btn-default">update</a>
-        </li>
-    {% endfor %}
-</ul>
+{% extends "StoreCoreBundle::layout.html.twig" %}
+{% block body %}
+    <div id="header" class="jumbotron">
+        <a href="{{ path('store_add_category') }}" class="btn btn-default">create new</a>
+            <ul class="list-group">
+                {% for elem in categories %}
+                    <li class="list-group-item">{{ elem.name }}
+                            <a href="{{ path('store_find_category', {'id': elem.id}) }}" class="btn btn-default">detail</a>
+                            <a href="{{ path('store_delete_category', {'id': elem.id}) }}" class="btn btn-default">delete</a>
+                            <a href="{{ path('store_update_category', {'id': elem.id}) }}" class="btn btn-default">update</a>
+                    </li>
+                {% endfor %}
+            </ul>
+    </div>
+{% endblock %}

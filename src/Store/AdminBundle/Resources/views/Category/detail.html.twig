@@ -1,2 +1,7 @@
-{{ category.id }}
-{{ category.name }}
+{% extends "StoreCoreBundle::layout.html.twig" %}
+{% block body %}
+    <div id="header" class="jumbotron">
+        {{ category.id }}
+        {{ category.name }}
+    </div>
+{% endblock %}

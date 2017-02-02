@@ -1,0 +1,25 @@
+{% extends "StoreCoreBundle::layout.html.twig" %}
+{% block body %}
+    {% set price = 0 %}
+    {% set number = 0 %}
+    <ul class="list-group">{% for elem in productCart %}
+            {% for cart in elem.cart %}
+                {% if cart.id == app.user.cart.id %}
+                    {% for product in elem.product %}
+                        {% set price = price + product.price %}
+                        {% set number = number+1 %}
+                        <li class="list-group-item">
+                            {{ product.name }}
+                        </li>
+                    {% endfor %}
+                {% endif %}
+            {% endfor %}
+            {% if loop.last %}
+                <li class="list-group-item">status : {{ elem.status }}</li>
+            {% endif %}
+        {% endfor %}
+        <li class="list-group-item">price : {{ price }}</li>
+        <li class="list-group-item">number : {{ number }}</li>
+    </ul>
+
+{% endblock %}

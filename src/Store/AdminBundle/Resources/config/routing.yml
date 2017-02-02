@@ -46,3 +46,13 @@ store_delete_user:
 store_update_user:
     path:     /updateUser/{id}
     defaults: { _controller: StoreAdminBundle:Member:update }
+#productCart
+store_cart:
+    path:     /cart
+    defaults: { _controller: StoreAdminBundle:Cart:showCart }
+store_cart_accept:
+    path:     /cart/{id}
+    defaults: { _controller: StoreAdminBundle:Cart:acceptCart }
+store_cart_product:
+    path:     /cart/product/{id}
+    defaults: { _controller: StoreAdminBundle:Cart:productCart }
